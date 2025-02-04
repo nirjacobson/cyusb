@@ -621,8 +621,8 @@ void ControlCenter::on_le3_out_hex_textEdited()
     char tbuf[5];
     unsigned int sz;
 
-    QRegExp rx("[0-9A-Fa-f]*");
-    QValidator *validator = new QRegExpValidator(rx, this);
+    QRegularExpression rx("[0-9A-Fa-f]*");
+    QRegularExpressionValidator *validator = new QRegularExpressionValidator(rx);
     ui->le3_out_hex->setValidator(validator);
 
     QByteArray t = ui->le3_out_hex->text().toUtf8();
@@ -742,7 +742,6 @@ void ControlCenter::on_pb_execvc_clicked()
     }
 }
 
-
 void ControlCenter::on_pb3_dl_clicked()
 {
     fx2_ram_download(qPrintable(ui->lab3_selfile->text()), 0);
@@ -752,15 +751,13 @@ void ControlCenter::on_pb3_dl_clicked()
     return ;
 }
 
-
-
 void ControlCenter::on_le6_out_hex_textEdited()
 {
     char tbuf[5];
     unsigned int sz;
 
-    QRegExp rx("[0-9A-Fa-f]*");
-    QValidator *validator = new QRegExpValidator(rx, this);
+    QRegularExpression rx("[0-9A-Fa-f]*");
+    QRegularExpressionValidator *validator = new QRegularExpressionValidator(rx);
     ui->le6_out_hex->setValidator(validator);
 
     QByteArray t = ui->le6_out_hex->text().toUtf8();

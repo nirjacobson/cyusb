@@ -9,6 +9,7 @@
 #include <QElapsedTimer>
 #include <QProgressBar>
 #include <QStatusBar>
+#include <QRegularExpression>
 
 #include <sys/types.h>
 #include <sys/socket.h>
