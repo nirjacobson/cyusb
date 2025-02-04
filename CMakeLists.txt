@@ -18,7 +18,7 @@ set(PROJECT_SOURCES
     fx2_download.cpp
     fx3_download.cpp
     main.cpp
-    Makefile
+
     streamer.cpp
     usbmethods.h
     include/cyusb.h
@@ -52,7 +52,7 @@ endif()
 
 target_link_libraries(cyusb PRIVATE Qt${QT_VERSION_MAJOR}::Widgets
                         Qt${QT_VERSION_MAJOR}::Network
-                        /usr/lib64/libusb-1.0.so)
+                        usb-1.0)
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
 # If you are developing for iOS or macOS you should consider setting an
